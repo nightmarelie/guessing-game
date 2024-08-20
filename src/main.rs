@@ -2,7 +2,13 @@ use std::io;
 use std::cmp::Ordering;
 use rand::Rng;
 
+use crate::garden::vegetables::Asparagus;
+pub mod garden;
+
 fn main() {
+    let plant = Asparagus {};
+    println!("I'm growing {plant:?}!");
+
     println!("Guess the number!");
 
     let secret_number = rand::thread_rng().gen_range(1..=100);
